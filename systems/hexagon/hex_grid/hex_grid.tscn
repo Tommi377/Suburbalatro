@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://bcgdoitpglatg"]
 
 [ext_resource type="Texture2D" uid="uid://bxglrao60f220" path="res://systems/hexagon/images/tiles/grass/grass_05.png" id="1_3ut7h"]
-[ext_resource type="Script" uid="uid://djgfhp1hylj2o" path="res://systems/hexagon/highlight_layer.gd" id="2_8ksyq"]
+[ext_resource type="Script" uid="uid://djgfhp1hylj2o" path="res://systems/hexagon/hex_grid/highlight_layer.gd" id="2_8ksyq"]
 [ext_resource type="Texture2D" uid="uid://crifsn7l1o6u1" path="res://systems/hexagon/images/tiles/stone/stone_01.png" id="2_tbvsq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ksyq"]
