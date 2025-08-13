@@ -3,7 +3,7 @@ extends Node
 
 func debug(message: String, source := "", data: Variant = null) -> void:
 	var msg := _format_msg(message, source, data)
-	print_debug(msg)
+	print(msg)
 
 func info(message: String, source := "", data: Variant = null) -> void:
 	var msg := _format_msg(message, source, data)

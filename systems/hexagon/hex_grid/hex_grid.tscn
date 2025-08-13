@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://bcgdoitpglatg"]
+[gd_scene load_steps=9 format=4 uid="uid://bcgdoitpglatg"]
 
 [ext_resource type="Texture2D" uid="uid://bxglrao60f220" path="res://systems/hexagon/images/tiles/grass/grass_05.png" id="1_3ut7h"]
+[ext_resource type="Script" uid="uid://b8mgkt2d8kc1h" path="res://systems/hexagon/hex_grid/hex_grid.gd" id="1_tr7l5"]
 [ext_resource type="Script" uid="uid://djgfhp1hylj2o" path="res://systems/hexagon/hex_grid/highlight_layer.gd" id="2_8ksyq"]
 [ext_resource type="Texture2D" uid="uid://crifsn7l1o6u1" path="res://systems/hexagon/images/tiles/stone/stone_01.png" id="2_tbvsq"]
 
@@ -12,7 +13,7 @@ texture_region_size = Vector2i(120, 140)
 [sub_resource type="TileSet" id="TileSet_tbvsq"]
 tile_shape = 3
 tile_layout = 3
-tile_size = Vector2i(120, 140)
+tile_size = Vector2i(118, 138)
 sources/0 = SubResource("TileSetAtlasSource_8ksyq")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tf4et"]
@@ -23,15 +24,18 @@ texture_region_size = Vector2i(120, 140)
 [sub_resource type="TileSet" id="TileSet_3ut7h"]
 tile_shape = 3
 tile_layout = 3
-tile_size = Vector2i(120, 140)
+tile_size = Vector2i(118, 138)
 sources/0 = SubResource("TileSetAtlasSource_tf4et")
 
 [node name="HexGrid" type="Node2D"]
+script = ExtResource("1_tr7l5")
 
 [node name="GroundLayer" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
 tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wAAAAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_tbvsq")
 
 [node name="HighlightLayer" type="TileMapLayer" parent="."]
+z_index = 5
 tile_set = SubResource("TileSet_3ut7h")
 script = ExtResource("2_8ksyq")

@@ -16,7 +16,7 @@ texture = ExtResource("2_k0pd5")
 [node name="Building" type="Sprite2D" parent="Sprites"]
 texture = ExtResource("3_6uj5v")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="Collision" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-60, -35, 0, -70, 60, -35, 60, 35, 0, 70, -60, 35)
 
 [node name="DragAndDrop" type="Node" parent="." node_paths=PackedStringArray("target")]

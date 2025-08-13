@@ -18,7 +18,7 @@ func _ready() -> void:
 	assert(target, "DragAndDrop: No target set")
 	target.input_event.connect(_on_target_input_event.unbind(1))
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if dragging and event.is_action_pressed(cancel_drag_action):
 		_cancel_dragging()
 	elif dragging and event.is_action_released(start_drag_action):
@@ -39,7 +39,6 @@ func _cancel_dragging() -> void:
 func _start_dragging() -> void:
 	dragging = true
 	target.add_to_group("dragging")
-	target.z_index = 99
 	var offset := target.global_position - target.get_global_mouse_position()
 	dragData = DragData.new(target, offset)
 	drag_started.emit(dragData)
