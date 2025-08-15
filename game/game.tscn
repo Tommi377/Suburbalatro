@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjlbvnne0whuf"]
+[gd_scene load_steps=5 format=3 uid="uid://bjlbvnne0whuf"]
 
 [ext_resource type="Script" uid="uid://ceaj3na2kxks" path="res://game/game.gd" id="1_l1rk1"]
 [ext_resource type="PackedScene" uid="uid://bcgdoitpglatg" path="res://systems/hexagon/hex_grid/hex_grid.tscn" id="2_vasa2"]
+[ext_resource type="Script" uid="uid://dbjpxwhpo7t33" path="res://gui/resources_ui.gd" id="3_dakft"]
+[ext_resource type="Script" uid="uid://bj7o05rrcqspc" path="res://game/stats_manager.gd" id="5_dxrkv"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_l1rk1")
@@ -10,3 +12,26 @@ script = ExtResource("1_l1rk1")
 unique_name_in_owner = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="TopBar" type="MarginContainer" parent="Hud"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -159.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 16
+
+[node name="ResourcesUI" type="VBoxContainer" parent="Hud/TopBar"]
+layout_mode = 2
+theme_override_constants/separation = 4
+script = ExtResource("3_dakft")
+
+[node name="StatsManager" type="Node" parent="."]
+script = ExtResource("5_dxrkv")

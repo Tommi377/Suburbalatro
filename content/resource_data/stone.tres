@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ResourceData" load_steps=4 format=3 uid="uid://ddfp1dyj3lysj"]
+
+[ext_resource type="Script" uid="uid://c5rs6dtk68w7e" path="res://content/resource_data/_resource_data.gd" id="1_5ms5e"]
+[ext_resource type="Texture2D" uid="uid://cfwyyl043u675" path="res://shared/icons/emoji_u1faa8.png" id="2_5ms5e"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rjfe3"]
+diffuse_texture = ExtResource("2_5ms5e")
+
+[resource]
+script = ExtResource("1_5ms5e")
+type = 4
+label = "Stone"
+sprite = SubResource("CanvasTexture_rjfe3")
+metadata/_custom_type_script = "uid://c5rs6dtk68w7e"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ResourceData" load_steps=4 format=3 uid="uid://cimwqbdf757pb"]
+
+[ext_resource type="Script" uid="uid://c5rs6dtk68w7e" path="res://content/resource_data/_resource_data.gd" id="1_1t566"]
+[ext_resource type="Texture2D" uid="uid://w0q7qpyy0b05" path="res://shared/icons/emoji_u1f9d1_200d_1f33e.png" id="2_ifdkn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4etmo"]
+diffuse_texture = ExtResource("2_ifdkn")
+
+[resource]
+script = ExtResource("1_1t566")
+type = 1
+label = ""
+sprite = SubResource("CanvasTexture_4etmo")
+metadata/_custom_type_script = "uid://c5rs6dtk68w7e"

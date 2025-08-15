@@ -3,10 +3,12 @@ extends Node2D
 
 const MY_SCENE = preload("res://systems/hexagon/hex_cell/hex_cell.tscn")
 
-var original_z := z_index
 @onready var dnd: DragAndDrop = %DragAndDrop
 
 var coordinate := Vector2i.MIN # Use Vector2i.MIN as a invalid value
+
+var _original_z := z_index
+var _original_modulate := modulate
 
 static func create_instance(parent: Node) -> HexCell:
 	var instance: HexCell = MY_SCENE.instantiate()
@@ -20,6 +22,8 @@ func _ready() -> void:
 
 func _on_hex_drag_start(_drag_data: DragData) -> void:
 	z_index = 100
+	modulate = Color(_original_modulate, 0.9)
 
 func _on_hex_drag_end(_drag_data: DragData) -> void:
-	z_index = original_z
+	z_index = _original_z
+	modulate = _original_modulate

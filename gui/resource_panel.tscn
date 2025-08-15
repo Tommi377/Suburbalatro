@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bouupiyd6qrd6"]
+
+[ext_resource type="Script" uid="uid://3uddb4nhmxex" path="res://gui/resource_panel.gd" id="1_lalte"]
+[ext_resource type="Texture2D" uid="uid://bobgwel2jgppe" path="res://shared/icons/emoji_u1f468_200d_1f33e.png" id="1_w3t03"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4fuuu"]
+diffuse_texture = ExtResource("1_w3t03")
+
+[node name="ResourcePanel" type="PanelContainer"]
+script = ExtResource("1_lalte")
+resourceType = 1
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="Content" type="HBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Icon" type="TextureRect" parent="Margin/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = SubResource("CanvasTexture_4fuuu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "1"

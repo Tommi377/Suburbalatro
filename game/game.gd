@@ -7,6 +7,8 @@ func _ready() -> void:
 	var hex := HexCell.create_instance(self)
 	hex.global_position = Vector2(300, 0)
 	_register_hex_cell(hex)
+	
+	RunData.start_new_run()
 
 func _register_hex_cell(hex: HexCell) -> void:
 	hex.dnd.drag_started.connect(_on_hex_drag_started)

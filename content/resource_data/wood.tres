@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceData" load_steps=3 format=3 uid="uid://cxys83lxcks0g"]
+
+[ext_resource type="Script" uid="uid://c5rs6dtk68w7e" path="res://content/resource_data/_resource_data.gd" id="1_qhsax"]
+[ext_resource type="Texture2D" uid="uid://bk1wuq4c8mdni" path="res://shared/icons/emoji_u1fab5.png" id="2_qhsax"]
+
+[resource]
+script = ExtResource("1_qhsax")
+type = 2
+label = "Wood"
+sprite = ExtResource("2_qhsax")
+metadata/_custom_type_script = "uid://c5rs6dtk68w7e"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceData" load_steps=3 format=3 uid="uid://bner1jl4wpc3a"]
+
+[ext_resource type="Script" uid="uid://c5rs6dtk68w7e" path="res://content/resource_data/_resource_data.gd" id="1_jg10p"]
+[ext_resource type="Texture2D" uid="uid://dfc5tsy83f58l" path="res://shared/icons/emoji_u1f9f1.png" id="2_go678"]
+
+[resource]
+script = ExtResource("1_jg10p")
+type = 3
+label = "Brick"
+sprite = ExtResource("2_go678")
+metadata/_custom_type_script = "uid://c5rs6dtk68w7e"

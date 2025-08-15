@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ResourceData" load_steps=4 format=3 uid="uid://c546vmjab44bi"]
+
+[ext_resource type="Script" uid="uid://c5rs6dtk68w7e" path="res://content/resource_data/_resource_data.gd" id="1_fhjcu"]
+[ext_resource type="Texture2D" uid="uid://cgf6oeoovnx0q" path="res://shared/icons/emoji_u1f4b5.png" id="2_ccski"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qgeq0"]
+diffuse_texture = ExtResource("2_ccski")
+
+[resource]
+script = ExtResource("1_fhjcu")
+type = 0
+label = "Money"
+sprite = SubResource("CanvasTexture_qgeq0")
+metadata/_custom_type_script = "uid://c5rs6dtk68w7e"
