@@ -11,16 +11,18 @@ func info(message: String, source := "", data: Variant = null) -> void:
 
 func warn(message: String, source := "", data: Variant = null) -> void:
 	var msg := _format_msg(message, source, data)
+	Panku.notify("(WARNING) " + msg)
 	print(msg)
 	
 func error(message: String, source := "", data: Variant = null) -> void:
 	var msg := _format_msg(message, source, data)
+	Panku.notify("(ERROR) " + msg)
 	push_error(msg)
 	printerr(msg)
 
 func _format_msg(message: String, source := "", data: Variant = null) -> String:
-	var json_string := JSON.stringify(data) if data else ""
+	var data_string := ", %s" % JSON.stringify(data) if data else ""
 	if source:
-		return "%s: %s Data: %s" % [source, message, json_string]
+		return "%s: %s %s" % [source, message, data_string]
 	else:
-		return "%s Data: %s" % [message, json_string]
+		return "%s %s" % [message, data_string]

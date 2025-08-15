@@ -1,7 +1,7 @@
 class_name PlayerData
 extends RefCounted
 
-var resources: Dictionary[Enum.ResourceType, int] = {}
+@export var resources: Dictionary[Enum.ResourceType, int] = {}
 
 func _init() -> void:
 	resources[Enum.ResourceType.Worker] = 2

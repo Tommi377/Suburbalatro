@@ -83,6 +83,10 @@ toggle_console={
 ]
 }
 
+[panku]
+
+disable_on_release=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

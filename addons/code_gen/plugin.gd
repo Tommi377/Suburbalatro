@@ -14,7 +14,6 @@ func _exit_tree() -> void:
 
 
 func _on_create_callback_selected(code_edit: CodeEdit) -> void:
-	print(CODE_GEN_SHORTCUT)
 	var to_function_text : String = code_edit.get_selected_text()
 	var last_line = code_edit.get_line_count() - 1
 	var code : String = code_edit.get_selected_text()
