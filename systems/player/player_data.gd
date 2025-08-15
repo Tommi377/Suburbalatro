@@ -17,11 +17,11 @@ func get_resource(type: Enum.ResourceType) -> int:
 func add_resource(type: Enum.ResourceType, amount: int) -> void:
 	_init_if_null(type)
 	resources[type] += amount
-	RunData.player_data_resource_changed.emit()
+	GameData.player_data_resource_changed.emit()
 
 func remove_resource(type: Enum.ResourceType, amount: int) -> void:
 	add_resource(type, -amount)
-	RunData.player_data_resource_changed.emit()
+	GameData.player_data_resource_changed.emit()
 
 func _init_if_null(type: Enum.ResourceType) -> void:
 	if not resources.has(type):

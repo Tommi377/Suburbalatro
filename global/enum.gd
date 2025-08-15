@@ -6,5 +6,21 @@ enum ResourceType {
 	Worker,
 	Wood,
 	Brick,
-	Stone
+	Stone,
+	Food
+}
+
+enum Trigger {
+	OnTick,
+	OnPlace,
+	OnBuy,
+	OnUse,
+}
+
+enum Comparison {
+	Less,
+	LessEqual,
+	Equal,
+	MoreEqual,
+	More
 }

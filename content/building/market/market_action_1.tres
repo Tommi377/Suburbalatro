@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="CompoundAction" load_steps=9 format=3 uid="uid://bkr7p6jkt3se6"]
+
+[ext_resource type="Script" uid="uid://dhlm3ag3griyi" path="res://content/action/_action.gd" id="1_7o4wp"]
+[ext_resource type="Script" uid="uid://b3mp6xt0lspy2" path="res://content/action/requirement/_requirement.gd" id="2_rkvet"]
+[ext_resource type="Script" uid="uid://chu3p334tp5ct" path="res://content/action/compound_action.gd" id="3_3pua2"]
+[ext_resource type="Script" uid="uid://cdrtkb0lsiv1b" path="res://content/action/resource_change_action.gd" id="3_qhlwo"]
+[ext_resource type="Script" uid="uid://44lekkrypyaa" path="res://content/action/requirement/comparison_requirement.gd" id="4_e1uao"]
+
+[sub_resource type="Resource" id="Resource_octqq"]
+script = ExtResource("3_qhlwo")
+resourceType = 0
+amount = -1
+triggers = Array[int]([])
+requirements = Array[ExtResource("2_rkvet")]([])
+metadata/_custom_type_script = "uid://cdrtkb0lsiv1b"
+
+[sub_resource type="Resource" id="Resource_ap6o2"]
+script = ExtResource("3_qhlwo")
+resourceType = 5
+amount = 3
+triggers = Array[int]([])
+requirements = Array[ExtResource("2_rkvet")]([])
+metadata/_custom_type_script = "uid://cdrtkb0lsiv1b"
+
+[sub_resource type="Resource" id="Resource_8puy4"]
+script = ExtResource("4_e1uao")
+resourceType = 0
+operation = 4
+variable = 1
+metadata/_custom_type_script = "uid://44lekkrypyaa"
+
+[resource]
+script = ExtResource("3_3pua2")
+actions = Array[ExtResource("1_7o4wp")]([SubResource("Resource_octqq"), SubResource("Resource_ap6o2")])
+triggers = Array[int]([3])
+requirements = Array[ExtResource("2_rkvet")]([SubResource("Resource_8puy4")])
+metadata/_custom_type_script = "uid://chu3p334tp5ct"

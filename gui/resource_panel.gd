@@ -20,6 +20,6 @@ func _ready() -> void:
 	update_ui()
 
 func update_ui() -> void:
-	var data := RunData.playerData.get_resource(_resourceData.type)
+	var data := GameData.playerData.get_resource(_resourceData.type)
 	count.text = str(data)
 	icon.texture = _resourceData.sprite

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjlbvnne0whuf"]
+[gd_scene load_steps=6 format=3 uid="uid://bjlbvnne0whuf"]
 
 [ext_resource type="Script" uid="uid://ceaj3na2kxks" path="res://game/game.gd" id="1_l1rk1"]
 [ext_resource type="PackedScene" uid="uid://bcgdoitpglatg" path="res://systems/hexagon/hex_grid/hex_grid.tscn" id="2_vasa2"]
 [ext_resource type="Script" uid="uid://dbjpxwhpo7t33" path="res://gui/resources_ui.gd" id="3_dakft"]
+[ext_resource type="Script" uid="uid://pa1a1xksfhbw" path="res://systems/action_service/action_service.gd" id="4_dxrkv"]
 [ext_resource type="Script" uid="uid://bj7o05rrcqspc" path="res://game/stats_manager.gd" id="5_dxrkv"]
 
 [node name="Game" type="Node2D"]
@@ -12,6 +13,13 @@ script = ExtResource("1_l1rk1")
 unique_name_in_owner = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StatsManager" type="Node" parent="."]
+script = ExtResource("5_dxrkv")
+
+[node name="ActionService" type="Node" parent="."]
+script = ExtResource("4_dxrkv")
+metadata/_custom_type_script = "uid://pa1a1xksfhbw"
 
 [node name="Hud" type="CanvasLayer" parent="."]
 
@@ -33,5 +41,42 @@ layout_mode = 2
 theme_override_constants/separation = 4
 script = ExtResource("3_dakft")
 
-[node name="StatsManager" type="Node" parent="."]
-script = ExtResource("5_dxrkv")
+[node name="Control" type="MarginContainer" parent="Hud"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="GridContainer" type="GridContainer" parent="Hud/Control"]
+layout_mode = 2
+columns = 4
+
+[node name="Button" type="Button" parent="Hud/Control/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="Hud/Control/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="Hud/Control/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="Hud/Control/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="Hud/Control/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="Hud/Control/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2

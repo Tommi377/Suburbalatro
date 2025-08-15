@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceData" load_steps=3 format=3 uid="uid://cggpacwl60ehq"]
+
+[ext_resource type="Script" uid="uid://c5rs6dtk68w7e" path="res://content/resource_data/_resource_data.gd" id="1_243lb"]
+[ext_resource type="Texture2D" uid="uid://v7y8gpeibdlm" path="res://shared/icons/emoji_u1f35e.png" id="2_243lb"]
+
+[resource]
+script = ExtResource("1_243lb")
+type = 5
+label = "Food"
+sprite = ExtResource("2_243lb")
+metadata/_custom_type_script = "uid://c5rs6dtk68w7e"

@@ -1,4 +1,4 @@
-#class_name RunData
+#class_name GameData
 extends Node
 
 signal player_data_resource_changed

@@ -34,7 +34,7 @@ Logger="*res://global/logger.gd"
 Enum="*res://global/enum.gd"
 Constants="*res://global/constants.gd"
 Data="*res://global/data.gd"
-RunData="*res://global/run_data.gd"
+GameData="*res://global/game_data.gd"
 SubsceneCamera="*res://global/subscene_camera.gd"
 Panku="*res://addons/panku_console/console.tscn"
 

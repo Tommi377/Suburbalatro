@@ -1,5 +1,16 @@
 {
   "column_properties": {
+    "res://content/building/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
     "res://example/Items/": {
       "metadata/_custom_type_script": {
         "visibility": 0.0
@@ -60,7 +71,8 @@
     "res://example/Items/",
     "res://example/Random Upgrades/icons/",
     "res://example/Random Upgrades/upgrades/",
-    "res://example/Random Upgrades/upgrades_csv/"
+    "res://example/Random Upgrades/upgrades_csv/",
+    "res://content/building/"
   ],
   "table_functions": {
     "filter": [
