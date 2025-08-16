@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp3qfukoo0an1"]
+
+[ext_resource type="Script" uid="uid://cwgsaqqyt8313" path="res://gui/worker_ui/worker_ui.gd" id="1_f5gnm"]
+
+[node name="WorkerUI" type="HBoxContainer"]
+alignment = 1
+script = ExtResource("1_f5gnm")

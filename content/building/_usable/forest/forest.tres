@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=6 format=3 uid="uid://dcn0xe1i2gaok"]
+
+[ext_resource type="Script" uid="uid://dhlm3ag3griyi" path="res://content/action/_action.gd" id="1_fn446"]
+[ext_resource type="Resource" uid="uid://8td3fj8khiva" path="res://content/building/_usable/forest/forest_action1.tres" id="2_4syee"]
+[ext_resource type="Script" uid="uid://be7xmxhm13jft" path="res://content/building/_building_data.gd" id="3_fknh7"]
+[ext_resource type="Texture2D" uid="uid://ynb7og7shqqf" path="res://content/building/_usable/forest/emoji_u1f332.png" id="4_pctr1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2ri6e"]
+diffuse_texture = ExtResource("4_pctr1")
+
+[resource]
+script = ExtResource("3_fknh7")
+id = "forest"
+name = "Forest"
+sprite = SubResource("CanvasTexture_2ri6e")
+is_action = true
+baseCost = Dictionary[int, int]({})
+actions = Array[ExtResource("1_fn446")]([ExtResource("2_4syee")])
+metadata/_custom_type_script = "uid://be7xmxhm13jft"

@@ -1,20 +1,23 @@
-[gd_resource type="Resource" script_class="BuildingData" load_steps=5 format=3 uid="uid://c155k6kamy7bv"]
+[gd_resource type="Resource" script_class="BuildingData" load_steps=6 format=3 uid="uid://c155k6kamy7bv"]
 
 [ext_resource type="Script" uid="uid://dhlm3ag3griyi" path="res://content/action/_action.gd" id="1_s0gip"]
+[ext_resource type="Resource" uid="uid://bkr7p6jkt3se6" path="res://content/building/market/market_action_1.tres" id="2_dajdw"]
 [ext_resource type="Script" uid="uid://be7xmxhm13jft" path="res://content/building/_building_data.gd" id="2_enrp7"]
-[ext_resource type="Texture2D" uid="uid://3johuioddjaw" path="res://content/building/market/emoji_u1f3ea.png" id="3_dajdw"]
+[ext_resource type="Texture2D" uid="uid://3johuioddjaw" path="res://content/building/market/emoji_u1f3ea.png" id="4_331yb"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_331yb"]
-diffuse_texture = ExtResource("3_dajdw")
+diffuse_texture = ExtResource("4_331yb")
 
 [resource]
 script = ExtResource("2_enrp7")
-name = "Sawmill"
+id = "market"
+name = "Market"
 sprite = SubResource("CanvasTexture_331yb")
+is_action = false
 baseCost = Dictionary[int, int]({
 2: 1,
 3: 1,
 4: 1
 })
-actions = Array[ExtResource("1_s0gip")]([])
+actions = Array[ExtResource("1_s0gip")]([ExtResource("2_dajdw")])
 metadata/_custom_type_script = "uid://be7xmxhm13jft"

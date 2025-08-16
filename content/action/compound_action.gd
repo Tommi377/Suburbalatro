@@ -9,3 +9,9 @@ static func get_id() -> String:
 func execute(player: PlayerData, grid: HexGrid) -> void:
 	for action in actions:
 		action.execute(player, grid)
+
+func get_description() -> String:
+	var descriptions := actions.map(
+		func(action: Action) -> String: return action.get_description()
+	)
+	return '\n'.join(descriptions)

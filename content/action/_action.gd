@@ -15,6 +15,14 @@ func can_execute(trigger: Enum.Trigger, player: PlayerData, grid: HexGrid) -> bo
 	if not triggers.has(trigger):
 		return false
 	
+	# OnUse triggers use a worker
+	if trigger == Enum.Trigger.OnUse && player.workers <= 0:
+		return false
+	
 	return requirements.all(
-		func(requirement): requirement.apply(player, grid)
+		func(requirement: Requirement) -> bool:
+			return requirement.apply(player, grid)
 	)
+
+func get_description() -> String:
+	return "No description"

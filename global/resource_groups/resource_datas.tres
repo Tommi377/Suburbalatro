@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://cb0xcks5hixs1"]
+
+[ext_resource type="Script" uid="uid://fqxll7lpyqw7" path="res://addons/godot_resource_groups/resource_group.gd" id="1_7pibp"]
+
+[resource]
+script = ExtResource("1_7pibp")
+base_folder = "res://content/resource_data"
+includes = Array[String](["**.tres"])
+excludes = Array[String]([])
+paths = Array[String](["res://content/resource_data/brick.tres", "res://content/resource_data/food.tres", "res://content/resource_data/money.tres", "res://content/resource_data/stone.tres", "res://content/resource_data/wood.tres", "res://content/resource_data/worker.tres"])
+metadata/_custom_type_script = "uid://fqxll7lpyqw7"

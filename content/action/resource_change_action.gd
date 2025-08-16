@@ -9,3 +9,10 @@ static func get_id() -> String:
 	
 func execute(player: PlayerData, grid: HexGrid) -> void:
 	player.add_resource(resourceType, amount)
+
+func get_description() -> String:
+	var resourceData := ResourceData.from(resourceType)
+	if amount < 0:
+		return "Lose %d %s" % [-amount, resourceData.label]
+	else:
+		return "Gain %d %s" % [amount, resourceData.label]

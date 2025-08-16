@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://78t47vn7agjp"]
+
+[ext_resource type="Texture2D" uid="uid://w0q7qpyy0b05" path="res://shared/icons/emoji_u1f9d1_200d_1f33e.png" id="1_lpqlp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_y36n6"]
+diffuse_texture = ExtResource("1_lpqlp")
+
+[node name="WorkerPanel" type="PanelContainer"]
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="WorkerIcon" type="TextureRect" parent="Margin"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = SubResource("CanvasTexture_y36n6")
+expand_mode = 4
+stretch_mode = 4

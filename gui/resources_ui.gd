@@ -16,5 +16,5 @@ func _update_ui() -> void:
 			resourcePanels[type].update_ui()
 
 
-func _on_player_data_resource_changed() -> void:
+func _on_player_data_resource_changed(_player: PlayerData, _type: Enum.ResourceType) -> void:
 	_update_ui()

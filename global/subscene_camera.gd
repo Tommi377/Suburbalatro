@@ -26,5 +26,5 @@ func is_running_main_scene() -> bool:
 func _add_camera_to_scene() -> void:
 	var new_camera := Camera2D.new() 
 	new_camera.name = "Subscene Camera"
-	get_tree().root.add_child.call_deferred(new_camera)
+	get_tree().current_scene.add_child.call_deferred(new_camera)
  

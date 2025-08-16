@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://d30vwo1okj284"]
+
+[ext_resource type="Texture2D" uid="uid://ynb7og7shqqf" path="res://content/building/_usable/forest/emoji_u1f332.png" id="1_6ehr7"]
+[ext_resource type="Script" uid="uid://d0n4imu05toan" path="res://gui/action_ui/action_button.gd" id="1_gvgj2"]
+[ext_resource type="Resource" uid="uid://dcn0xe1i2gaok" path="res://content/building/_usable/forest/forest.tres" id="2_5to0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dakft"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_u5opy"]
+diffuse_texture = ExtResource("1_6ehr7")
+
+[sub_resource type="LabelSettings" id="LabelSettings_y36n6"]
+font_size = 18
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_dakft"]
+line_spacing = 0.0
+font_size = 14
+
+[node name="ActionButton" type="PanelContainer"]
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dakft")
+script = ExtResource("1_gvgj2")
+buildingData = ExtResource("2_5to0o")
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HSplitContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HSplitContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_u5opy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextContainer" type="VBoxContainer" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HSplitContainer/TextContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Forest"
+label_settings = SubResource("LabelSettings_y36n6")
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="MarginContainer/HSplitContainer/TextContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Gain 1 wood"
+label_settings = SubResource("LabelSettings_dakft")
+vertical_alignment = 1
+autowrap_mode = 2

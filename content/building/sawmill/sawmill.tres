@@ -10,8 +10,10 @@ diffuse_texture = ExtResource("4_1ypv6")
 
 [resource]
 script = ExtResource("2_copsd")
+id = "sawmill"
 name = "Sawmill"
 sprite = SubResource("CanvasTexture_p54d2")
+is_action = false
 baseCost = Dictionary[int, int]({
 2: 2
 })

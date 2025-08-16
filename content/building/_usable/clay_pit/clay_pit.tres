@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=6 format=3 uid="uid://8y8cxmfuqsl1"]
+
+[ext_resource type="Script" uid="uid://dhlm3ag3griyi" path="res://content/action/_action.gd" id="1_ywmkp"]
+[ext_resource type="Resource" uid="uid://gjk7dc450cah" path="res://content/building/_usable/clay_pit/clay_pit_action1.tres" id="2_ngkf5"]
+[ext_resource type="Script" uid="uid://be7xmxhm13jft" path="res://content/building/_building_data.gd" id="3_ylurp"]
+[ext_resource type="Texture2D" uid="uid://c6iv00aw6vlrn" path="res://content/building/_usable/clay_pit/emoji_u26b1.png" id="4_4qxqg"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ps52s"]
+diffuse_texture = ExtResource("4_4qxqg")
+
+[resource]
+script = ExtResource("3_ylurp")
+id = "clay_pit"
+name = "Clay Pit"
+sprite = SubResource("CanvasTexture_ps52s")
+is_action = true
+baseCost = Dictionary[int, int]({})
+actions = Array[ExtResource("1_ywmkp")]([ExtResource("2_ngkf5")])
+metadata/_custom_type_script = "uid://be7xmxhm13jft"
