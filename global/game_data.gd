@@ -6,10 +6,12 @@ signal player_data_worker_changed(player: PlayerData)
 signal player_data_resource_changed(player: PlayerData, type: Enum.ResourceType)
 
 var playerData: PlayerData = PlayerData.new()
+var round := 1
 
 func start_new_run() -> void:
 	playerData = PlayerData.new()
 
 func end_round() -> void:
+	round += 1
 	playerData.new_round()
 	round_end.emit()

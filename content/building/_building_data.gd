@@ -8,6 +8,7 @@ extends Resource
 @export var is_action: bool = false
 
 @export_category("Gameplay")
+@export var rarity: Enum.Rarity = Enum.Rarity.Common
 @export var baseCost: Dictionary[Enum.ResourceType, int]
 @export var actions: Array[Action]
 

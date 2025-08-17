@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="ResourceChangeAction" load_steps=3 format=3 uid="uid://8td3fj8khiva"]
 
-[ext_resource type="Script" uid="uid://b3mp6xt0lspy2" path="res://content/action/requirement/_requirement.gd" id="1_oeo0d"]
-[ext_resource type="Script" uid="uid://cdrtkb0lsiv1b" path="res://content/action/resource_change_action.gd" id="2_pu3x3"]
+[ext_resource type="Script" uid="uid://b3mp6xt0lspy2" path="res://content/action/requirement/_requirement.gd" id="1_o5dub"]
+[ext_resource type="Script" uid="uid://cdrtkb0lsiv1b" path="res://content/action/resource_change_action.gd" id="2_onolg"]
 
 [resource]
-script = ExtResource("2_pu3x3")
+script = ExtResource("2_onolg")
 resourceType = 2
-amount = 1
+amount = 3
 triggers = Array[int]([3])
-requirements = Array[ExtResource("1_oeo0d")]([])
+requirements = Array[ExtResource("1_o5dub")]([])
 metadata/_custom_type_script = "uid://cdrtkb0lsiv1b"

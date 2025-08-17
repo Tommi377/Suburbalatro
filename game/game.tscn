@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjlbvnne0whuf"]
+[gd_scene load_steps=10 format=3 uid="uid://bjlbvnne0whuf"]
 
 [ext_resource type="Script" uid="uid://ceaj3na2kxks" path="res://game/game.gd" id="1_l1rk1"]
 [ext_resource type="PackedScene" uid="uid://bcgdoitpglatg" path="res://systems/hexagon/hex_grid/hex_grid.tscn" id="2_vasa2"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" uid="uid://bj7o05rrcqspc" path="res://game/stats_manager.gd" id="5_dxrkv"]
 [ext_resource type="Script" uid="uid://cp1htc2t8vu16" path="res://gui/action_ui/action_ui.gd" id="6_dakft"]
 [ext_resource type="PackedScene" uid="uid://cp3qfukoo0an1" path="res://gui/worker_ui/worker_ui.tscn" id="7_u5opy"]
+[ext_resource type="Script" uid="uid://d1ref0mqhr3lu" path="res://gui/label_container.gd" id="8_y36n6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u5opy"]
+font_size = 32
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_l1rk1")
@@ -25,7 +29,7 @@ metadata/_custom_type_script = "uid://pa1a1xksfhbw"
 
 [node name="Hud" type="CanvasLayer" parent="."]
 
-[node name="TopBar" type="MarginContainer" parent="Hud"]
+[node name="RightBar" type="MarginContainer" parent="Hud"]
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
@@ -38,14 +42,14 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 16
 
-[node name="ResourcesUI" type="VBoxContainer" parent="Hud/TopBar"]
+[node name="ResourcesUI" type="VBoxContainer" parent="Hud/RightBar"]
 layout_mode = 2
 theme_override_constants/separation = 4
 script = ExtResource("3_dakft")
 
 [node name="ActionUI" type="MarginContainer" parent="Hud"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(200, 0)
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 264.0
@@ -76,3 +80,21 @@ theme_override_constants/margin_bottom = 16
 
 [node name="WorkerUI" parent="Hud/BottomBar" instance=ExtResource("7_u5opy")]
 layout_mode = 2
+
+[node name="RoundUI" type="MarginContainer" parent="Hud"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -61.0
+offset_right = 144.0
+grow_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("8_y36n6")
+
+[node name="RoundNumber" type="Label" parent="Hud/RoundUI"]
+layout_mode = 2
+text = "Round 1"
+label_settings = SubResource("LabelSettings_u5opy")

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_cldc6")
 resourceType = 2
-amount = 1
+amount = 2
 triggers = Array[int]([0])
 requirements = Array[ExtResource("1_vx2sf")]([])
 metadata/_custom_type_script = "uid://cdrtkb0lsiv1b"

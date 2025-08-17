@@ -1,6 +1,13 @@
 #class_name Enum
 extends Node
 
+enum Rarity {
+	Common,
+	Uncommon,
+	Rare,
+	Legendary
+}
+
 enum ResourceType {
 	Money,
 	Worker,

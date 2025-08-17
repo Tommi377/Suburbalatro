@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7mgih1ve51ur"
-path="res://.godot/imported/emoji_u1f9fa.png-c64ddbc68bf33a2490e462c352f689bc.ctex"
+path="res://.godot/imported/emoji_u1f9fa.png-26bc71cdec215eee22764236b994d5c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/icons/emoji_u1f9fa.png"
-dest_files=["res://.godot/imported/emoji_u1f9fa.png-c64ddbc68bf33a2490e462c352f689bc.ctex"]
+source_file="res://content/building/market_stall/emoji_u1f9fa.png"
+dest_files=["res://.godot/imported/emoji_u1f9fa.png-26bc71cdec215eee22764236b994d5c4.ctex"]
 
 [params]
 
